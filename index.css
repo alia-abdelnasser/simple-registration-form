@@ -1,0 +1,244 @@
+*{
+  font-family: 'Mada', sans-serif;
+}
+body {
+  background-color: #d2d2d2;
+}
+.form-card {
+  margin: 30px auto;
+  width: 50%;
+  background: #f9f9f9;
+  border-radius: 3px;
+  z-index: 22;
+  box-shadow: 0 0 1px 1px #d2d2d2;
+  position: relative;
+}
+.content {
+  padding: 3rem;
+}
+.title {
+  font-size: 1.2rem;
+  color: #268eb9;
+  border-bottom: 1px solid #606060;
+  padding-bottom: 19px;
+  text-transform: uppercase;
+}
+form input, form select {
+  width: 98%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.2rem;
+  font-size: 0.8rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #606060;
+  background: #f9f9f9;
+  outline: 0;
+  color: #606060;
+}
+input::placeholder{
+  color: #d2d2d2;
+}
+input::-ms-input-placeholder{
+  color: #d2d2d2;
+}
+form select{
+  color: #d2d2d2;
+}
+form select:focus{
+  outline: 0;
+}
+form option{
+  color: #606060;
+}
+form option:disabled{
+  color: #d2d2d2;
+}
+form input:focus {
+  outline: 0;
+}
+.radio-container {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  padding-right: 35px;
+}
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #d2d2d2;
+  border-radius: 50%;
+
+  right: 1%;
+}
+.radio-container:hover input ~ .checkmark {
+  background-color: #606060;
+}
+.radio-container input:checked ~ .checkmark {
+  background-color: #268eb9;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.radio-container .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid #f9f9f9;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.wrapper{
+  position: relative;
+  display: flex
+}
+.label{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.2rem;
+  font-size: 0.8rem;
+  color: #268eb9;
+  width: 10%;
+  border-bottom: 1px solid #606060;
+}
+.validation-msg {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin: -2% 10% 0 10%;
+}
+input:invalid:not(:placeholder-shown) {
+  border-bottom: 1px solid red;
+}
+p{
+  margin: 0;
+}
+button {
+  min-width: 120px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #268eb9;
+  color: #f9f9f9;
+  border: 0;
+  position: absolute;
+  outline: 0;
+  left: 3rem;
+}
+button:focus {
+  outline: 0;
+}
+button:disabled, button[disabled]{
+  background: #606060;
+  cursor: initial;
+}
+.result-msg{
+  color: green;
+  font-size: 12px;
+  margin: 1rem 0;
+  text-align: center;
+}
+.lineBot{
+  padding-bottom: 10px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #606060;
+}
+.bot{
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+} 
+
+/* loader */
+.lds-ellipsis {
+  display: none;
+  position: relative;
+  width: 64px;
+  height: 37px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #268eb9;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+/* responsive */
+@media only screen and (max-width: 800px) {
+  .form-card {
+    left: 10%;
+    width: 80%;
+  }
+  .label {
+    width: 15%;
+  }
+}

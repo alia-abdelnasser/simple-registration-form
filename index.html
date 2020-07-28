@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Form by Alia</title>
+    <link href="https://fonts.googleapis.com/css?family=Mada" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div>
+        <div class="form-card">
+            <div class="content">
+                <h1 class="title">
+                    تسجيل
+                    <!-- loader -->
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </h1>
+
+                <form>
+                    <!-- name -->
+                    <div class="wrapper">
+                        <label class="label" for="name">الاسم</label>
+                        <input type="text" id="name" placeholder="أدخل الاسم">
+                    </div>
+                    <div class="validation-msg validation-msg-name"></div>
+
+                    <!-- country -->
+                    <div class="wrapper">
+                        <label class="label" for="name">البلد</label>
+                        <select id="country" placeholder="Country">
+                            <option value="0" disabled selected>اختر البلد</option>
+                        </select>
+                    </div>
+                    <div class="validation-msg validation-msg-country"></div>
+
+                    <!-- city -->
+                    <div class="wrapper">
+                        <label class="label" for="name">المدينة</label>
+                        <select id="city" placeholder="city">
+                            <option value="0" disabled selected>اختر المدينة</option>
+                        </select>
+                    </div>
+                    <div class="validation-msg validation-msg-city"></div>
+
+                    <!-- date of birth -->
+                    <div class="wrapper">
+                        <label class="label" for="name">تاريخ الميلاد</label>
+                        <input type="date" id="dateOfBirth" value="1990-01-01">
+                    </div>
+                    <div class="validation-msg validation-msg-dateOfBirth"></div>
+
+                    <!-- gender -->
+                    <div class="wrapper">
+                        <label class="label" for="name">النوع</label>
+                        <div class="lineBot">
+                            <label class="radio-container">أنثى
+                                <input type="radio" id="female" name="gender" value="Female" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container">ذكر
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- question -->
+                    <div class="wrapper">
+                        <label class="label" for="name">سؤال لآمان</label>
+                        <div class="bot">
+                            <p id="question"></p>
+                            <input type="text" id="answer" placeholder="أدخل الإجابة">
+                        </div>
+                    </div>
+                    <div class="validation-msg validation-msg-question"></div>
+
+                    <div class="result-msg"></div>
+                    <button id="submitBtn" type="button">تسجيل</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
