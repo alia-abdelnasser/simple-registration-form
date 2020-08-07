@@ -30,13 +30,33 @@
         },
         {
             "id": 3,
-            "countryId": 1,
-            "name": "الزقازيق"
+            "countryId": 2,
+            "name": "عمان"
         },
         {
             "id": 4,
-            "countryId": 1,
-            "name": "المنوفية"
+            "countryId": 2,
+            "name": "العقبة"
+        },
+        {
+            "id": 5,
+            "countryId": 3,
+            "name": "القدس"
+        },
+        {
+            "id": 6,
+            "countryId": 3,
+            "name": "يافا"
+        },
+        {
+            "id": 7,
+            "countryId": 4,
+            "name": "الرياض"
+        },
+        {
+            "id": 8,
+            "countryId": 4,
+            "name": "جدة"
         }
     ],
     "accounts": []
