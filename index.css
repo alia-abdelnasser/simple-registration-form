@@ -1,9 +1,11 @@
-*{
+* {
   font-family: 'Mada', sans-serif;
 }
+
 body {
   background-color: #d2d2d2;
 }
+
 .form-card {
   margin: 30px auto;
   width: 50%;
@@ -13,9 +15,11 @@ body {
   box-shadow: 0 0 1px 1px #d2d2d2;
   position: relative;
 }
+
 .content {
   padding: 3rem;
 }
+
 .title {
   font-size: 1.2rem;
   color: #268eb9;
@@ -23,6 +27,7 @@ body {
   padding-bottom: 19px;
   text-transform: uppercase;
 }
+
 form input, form select {
   width: 98%;
   margin-top: 1rem;
@@ -37,27 +42,35 @@ form input, form select {
   outline: 0;
   color: #606060;
 }
-input::placeholder{
+
+input::placeholder {
   color: #d2d2d2;
 }
-input::-ms-input-placeholder{
+
+input::-ms-input-placeholder {
   color: #d2d2d2;
 }
-form select{
+
+form select {
   color: #d2d2d2;
 }
-form select:focus{
+
+form select:focus {
   outline: 0;
 }
-form option{
+
+form option {
   color: #606060;
 }
-form option:disabled{
+
+form option:disabled {
   color: #d2d2d2;
 }
+
 form input:focus {
   outline: 0;
 }
+
 .radio-container {
   display: block;
   position: relative;
@@ -65,6 +78,7 @@ form input:focus {
   cursor: pointer;
   padding-right: 35px;
 }
+
 .radio-container input {
   position: absolute;
   opacity: 0;
@@ -72,6 +86,7 @@ form input:focus {
   height: 0;
   width: 0;
 }
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -80,23 +95,27 @@ form input:focus {
   width: 20px;
   background-color: #d2d2d2;
   border-radius: 50%;
-
   right: 1%;
 }
-.radio-container:hover input ~ .checkmark {
+
+.radio-container:hover input~.checkmark {
   background-color: #606060;
 }
-.radio-container input:checked ~ .checkmark {
+
+.radio-container input:checked~.checkmark {
   background-color: #268eb9;
 }
+
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-.radio-container input:checked ~ .checkmark:after {
+
+.radio-container input:checked~.checkmark:after {
   display: block;
 }
+
 .radio-container .checkmark:after {
   left: 7px;
   top: 4px;
@@ -108,11 +127,13 @@ form input:focus {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.wrapper{
+
+.wrapper {
   position: relative;
   display: flex
 }
-.label{
+
+.label {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0.2rem 0.2rem;
@@ -121,18 +142,22 @@ form input:focus {
   width: 10%;
   border-bottom: 1px solid #606060;
 }
+
 .validation-msg {
   display: none;
   color: red;
   font-size: 12px;
   margin: -2% 10% 0 10%;
 }
+
 input:invalid:not(:placeholder-shown) {
   border-bottom: 1px solid red;
 }
-p{
+
+p {
   margin: 0;
 }
+
 button {
   min-width: 120px;
   padding: 0.5rem 1.5rem;
@@ -148,20 +173,24 @@ button {
   outline: 0;
   left: 3rem;
 }
+
 button:focus {
   outline: 0;
 }
-button:disabled, button[disabled]{
+
+button:disabled, button[disabled] {
   background: #606060;
   cursor: initial;
 }
-.result-msg{
+
+.result-msg {
   color: green;
   font-size: 12px;
   margin: 1rem 0;
   text-align: center;
 }
-.lineBot{
+
+.lineBot {
   padding-bottom: 10px;
   width: 100%;
   margin-top: 1rem;
@@ -169,19 +198,22 @@ button:disabled, button[disabled]{
   font-size: 0.8rem;
   border-bottom: 1px solid #606060;
 }
-.bot{
+
+.bot {
   width: 100%;
   margin-top: 1rem;
   font-size: 0.8rem;
-} 
+}
 
 /* loader */
+
 .lds-ellipsis {
   display: none;
   position: relative;
   width: 64px;
   height: 37px;
 }
+
 .lds-ellipsis div {
   position: absolute;
   top: 27px;
@@ -191,22 +223,27 @@ button:disabled, button[disabled]{
   background: #268eb9;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
+
 .lds-ellipsis div:nth-child(1) {
   left: 6px;
   animation: lds-ellipsis1 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(2) {
   left: 6px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(3) {
   left: 26px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(4) {
   left: 45px;
   animation: lds-ellipsis3 0.6s infinite;
 }
+
 @keyframes lds-ellipsis1 {
   0% {
     transform: scale(0);
@@ -215,6 +252,7 @@ button:disabled, button[disabled]{
     transform: scale(1);
   }
 }
+
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
@@ -223,6 +261,7 @@ button:disabled, button[disabled]{
     transform: scale(0);
   }
 }
+
 @keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0);
@@ -233,6 +272,7 @@ button:disabled, button[disabled]{
 }
 
 /* responsive */
+
 @media only screen and (max-width: 800px) {
   .form-card {
     left: 10%;
