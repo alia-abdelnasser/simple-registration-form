@@ -1,7 +1,7 @@
 (function () {
-    let submitUrl = 'https://medicoapitask.herokuapp.com/submitPatient';
-    let countriesUrl = 'https://medicoapitask.herokuapp.com/getCountries';
-    let citiesUrl = 'https://medicoapitask.herokuapp.com/getCities/';
+    let submitUrl = 'https://my-json-server.typicode.com/alia-abdelnasser/simple-registration-form-ar/accounts';
+    let countriesUrl = 'https://my-json-server.typicode.com/alia-abdelnasser/simple-registration-form-ar/countries';
+    let citiesUrl = 'https://my-json-server.typicode.com/alia-abdelnasser/simple-registration-form-ar/cities';
 
     let nameEl = document.querySelector('#name');
     let countryEl = document.querySelector('#country');
@@ -115,13 +115,18 @@
         // show loader
         loader.style.display = 'inline-block';
 
-        get(citiesUrl + countryId, function (res) {
+        get(citiesUrl + '?countryId=' + countryId, function (res) {
             drawCities(res);
         });
     }
 
     // draw on DOM
     function drawCities(citie) {
+        cityEl.innerHTML = '';
+        cityEl.style.borderBottom = '1px solid #606060';
+        cityVM.style.display = 'none';
+        cityEl.style.color = '#606060';
+
         citie.forEach(city => {
             cityEl.options[cityEl.options.length] = new Option(city.name, city.id);
         });
@@ -233,7 +238,7 @@
 
         post(submitUrl, data, function (res) {
             // display result
-            resultMsg.textContent = res;
+            resultMsg.textContent = 'تم التسجيل بنجاح';
             resultMsg.style.display = 'block';
             // hide loader
             loader.style.display = 'none';
